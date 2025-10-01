@@ -40,10 +40,10 @@ $CFG = new stdClass();
 
 $CFG->dbtype    = 'pgsql';                  // 'pgsql', 'mariadb', 'mysqli', 'auroramysql', or 'sqlsrv'
 $CFG->dblibrary = 'native';                 // 'native' only at the moment
-$CFG->dbhost    = 'localhost';              // eg 'localhost' or 'db.isp.com' or IP
-$CFG->dbname    = 'moodle';                 // database name, eg moodle
-$CFG->dbuser    = 'username';               // your database username
-$CFG->dbpass    = 'password';               // your database password
+$CFG->dbhost    = 'ep-plain-block-a4xsu8el.us-east-1.pg.koyeb.app';              // eg 'localhost' or 'db.isp.com' or IP
+$CFG->dbname    = 'koyebdb';                 // database name, eg moodle
+$CFG->dbuser    = 'root';               // your database username
+$CFG->dbpass    = 'npg_jkRXcPWBUz25';               // your database password
 $CFG->prefix    = 'mdl_';                   // prefix to use for all table names
 $CFG->dboptions = [
     'dbpersist' => false,                   // Should persistent database connections be
@@ -56,7 +56,7 @@ $CFG->dboptions = [
                                             //   (please note mysql is always using socket
                                             //   if dbhost is 'localhost' - if you need
                                             //   local port connection use '127.0.0.1')
-    'dbport'    => '',                      // The TCP port number to use when connecting
+    'dbport'    => '5432',                      // The TCP port number to use when connecting
                                             //   to the server. Keep empty string for the
                                             //   default port
     'dbhandlesoptions' => false,            // On PostgreSQL poolers like pgbouncer don't
@@ -173,7 +173,7 @@ $CFG->dboptions = [
 // If you need both intranet and Internet access please read
 // http://docs.moodle.org/en/masquerading
 
-$CFG->wwwroot   = 'http://example.com/moodle';
+$CFG->wwwroot   = 'http://system.mindaccel.org';
 
 // Generally it is not advisable to use a wwwroot that ends in 'public'.
 // This is because the 'public' directory is used to serve web-accessible content.
