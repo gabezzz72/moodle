@@ -23,5 +23,8 @@ RUN chown -R www-data:www-data /var/www/html
 # Expose port
 EXPOSE 80
 
+RUN mkdir -p /var/www/html/moodledata && chown -R www-data:www-data /var/www/html/moodledata
+VOLUME /var/www/html/moodledata
+
 # Start Apache
 CMD ["apache2-foreground"]
