@@ -180,7 +180,7 @@ $CFG->wwwroot   = 'http://system.mindaccel.org';
 // Moodle looks for any URL which ends in 'public' and assumes that it is a misconfiguration.
 // In the event that there is a need to have a wwwroot that ends in 'public', the
 // following setting can be used to override this check.
-$CFG->wwwrootendsinpublic = false;
+$CFG->wwwrootendsinpublic = true;
 
 //=========================================================================
 // 3. DATA FILES LOCATION
@@ -195,7 +195,7 @@ $CFG->wwwrootendsinpublic = false;
 //
 // - On Windows systems you might specify something like 'c:\moodledata'
 
-$CFG->dataroot  = '/home/example/moodledata';
+$CFG->dataroot  = '/var/www/moodledata';
 
 // Whether the Moodle router is fully configured.
 //
